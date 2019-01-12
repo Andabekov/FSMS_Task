@@ -2,8 +2,6 @@
 
 Guide
 
-This is a part of the tutorial http://javabycode.com/spring-framework-tutorial/spring-mvc-tutorial/spring-mvc-hibernate-mysql-integration-crud-example-tutorial.html
-
 What you'll need
 
 JDK 1.7 or later

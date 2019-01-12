@@ -29,7 +29,7 @@ public class MyHibernateConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] { "com.javabycode.springmvc.model" });
+        sessionFactory.setPackagesToScan(new String[] { "com.fsms.task.model" });
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
      }
