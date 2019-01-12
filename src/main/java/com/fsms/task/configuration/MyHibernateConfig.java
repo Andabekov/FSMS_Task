@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.javabycode.springmvc.configuration" })
+@ComponentScan({ "com.fsms.task.configuration" })
 @PropertySource(value = { "classpath:jdbc.properties" })
 public class MyHibernateConfig {
 

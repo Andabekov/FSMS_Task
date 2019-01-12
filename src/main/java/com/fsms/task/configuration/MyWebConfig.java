@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.javabycode.springmvc")
+@ComponentScan(basePackages = "com.fsms.task")
 public class MyWebConfig {
 	
 	@Bean
