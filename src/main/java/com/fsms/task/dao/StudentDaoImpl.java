@@ -1,4 +1,4 @@
-package com.javabycode.springmvc.dao;
+package com.fsms.task.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-import com.javabycode.springmvc.model.Student;
+import com.fsms.task.model.Student;
 
 @Repository("studentDao")
 public class StudentDaoImpl extends AbstractDao<Integer, Student> implements StudentDao {

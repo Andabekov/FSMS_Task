@@ -1,4 +1,4 @@
-package com.javabycode.springmvc.configuration;
+package com.fsms.task.configuration;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;

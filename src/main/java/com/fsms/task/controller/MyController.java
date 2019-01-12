@@ -1,4 +1,4 @@
-package com.javabycode.springmvc.controller;
+package com.fsms.task.controller;
 
 import java.util.List;
 import java.util.Locale;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.javabycode.springmvc.model.Student;
-import com.javabycode.springmvc.service.StudentService;
+import com.fsms.task.model.Student;
+import com.fsms.task.service.StudentService;
 
 @Controller
 @RequestMapping("/")

@@ -1,8 +1,8 @@
-package com.javabycode.springmvc.dao;
+package com.fsms.task.dao;
 
 import java.util.List;
 
-import com.javabycode.springmvc.model.Student;
+import com.fsms.task.model.Student;
 
 public interface StudentDao {
 

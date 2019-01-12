@@ -1,8 +1,8 @@
-package com.javabycode.springmvc.service;
+package com.fsms.task.service;
 
 import java.util.List;
 
-import com.javabycode.springmvc.model.Student;
+import com.fsms.task.model.Student;
 
 public interface StudentService {
 

@@ -1,4 +1,4 @@
-package com.javabycode.springmvc.configuration;
+package com.fsms.task.configuration;
 
 import java.util.Properties;
 

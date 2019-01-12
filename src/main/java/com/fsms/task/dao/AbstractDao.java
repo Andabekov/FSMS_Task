@@ -1,4 +1,4 @@
-package com.javabycode.springmvc.dao;
+package com.fsms.task.dao;
 
 import java.io.Serializable;
 

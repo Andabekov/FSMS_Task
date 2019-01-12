@@ -1,4 +1,4 @@
-package com.javabycode.springmvc.model;
+package com.fsms.task.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

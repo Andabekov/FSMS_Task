@@ -1,13 +1,13 @@
-package com.javabycode.springmvc.service;
+package com.fsms.task.service;
 
 import java.util.List;
 
+import com.fsms.task.dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.javabycode.springmvc.dao.StudentDao;
-import com.javabycode.springmvc.model.Student;
+import com.fsms.task.model.Student;
 
 @Service("studentService")
 @Transactional
