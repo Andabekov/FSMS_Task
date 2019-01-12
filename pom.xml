@@ -4,9 +4,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.javabycode.springmvc</groupId>
-	<artifactId>SpringMVCHibernateExample</artifactId>
+	<artifactId>FSMS_Task</artifactId>
 	<packaging>war</packaging>
-	<name>SpringMVCHibernateExample</name>
+	<name>FSMS_Task</name>
 	<version>1.0</version>
 
 	<properties>
@@ -105,7 +105,7 @@
 
 
 	<build>
-		<finalName>spring-mvc-hibernate-example</finalName>
+		<finalName>FSMS_Task</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
