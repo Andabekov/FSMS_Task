@@ -71,7 +71,13 @@ public class StudentServiceImpl implements StudentService {
 		Student student = findStudentByCode(ssn);
 		return ( student == null || ((id != null) && (student.getId() == id)));
 	}
-	public boolean sign()  throws Exception {
+	public boolean sign(Student student)  throws Exception {
+
+		String str = "<root><negotiation> <name> "+student.getName()+" </name> <code> "+student.getCode()+" </code> </negotiation></root>";
+		BufferedWriter writer = new BufferedWriter(new FileWriter("test.xml", false));
+		writer.write(str);
+		writer.close();
+
 		final InputStream fileInputStream = new FileInputStream("test.xml");
 		try {
 			output(signFile(fileInputStream, new File("keystore.jks")), "signed-test.xml");

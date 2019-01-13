@@ -1,13 +1,17 @@
 package com.fsms.task.controller;
 
+import java.io.File;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import com.fsms.task.model.Orders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -18,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fsms.task.model.Student;
 import com.fsms.task.service.StudentService;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/")
@@ -133,10 +138,13 @@ public class MyController {
 	/*
 	 * Delete an Student by it's CODE value.
 	 */
-	@RequestMapping(value = { "/sign" }, method = RequestMethod.GET)
-	public String sign() throws Exception {
-		service.sign();
-		return "redirect:/list";
+	@RequestMapping(value = { "/sign-{code}" }, method = RequestMethod.GET, produces = { MediaType.APPLICATION_XML_VALUE })
+	@ResponseBody
+	public FileSystemResource sign(HttpServletResponse response, @PathVariable String code) throws Exception {
+		Student student = service.findStudentByCode(code);
+		service.sign(student);
+		response.setContentType("application/xml");
+		return new FileSystemResource(new File("signed-test.xml"));
 	}
 
 }

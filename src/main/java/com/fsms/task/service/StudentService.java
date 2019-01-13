@@ -20,6 +20,6 @@ public interface StudentService {
 
 	boolean isStudentCodeUnique(Integer id, String code);
 
-	boolean sign() throws Exception;
+	boolean sign(Student student) throws Exception;
 	
 }
