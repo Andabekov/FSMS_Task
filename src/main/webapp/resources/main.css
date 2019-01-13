@@ -13,6 +13,10 @@ body, html {
     padding: 40px 40px;
 }
 
+.error {
+    color: #ff0000;
+}
+
 .btn {
     /*font-weight: 700;*/
     /*height: 36px;*/
@@ -21,6 +25,7 @@ body, html {
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
+    background-color: #48a0ff;
 }
 
 /*
