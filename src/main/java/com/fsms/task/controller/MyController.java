@@ -46,7 +46,7 @@ public class MyController {
 	}
 
 	@RequestMapping(value= { "/role1" }, method = RequestMethod.GET)
-	public String role1(){
+	public String role1(ModelMap model){
 
 //		List<Orders> orders = service.
 		return "role1page";

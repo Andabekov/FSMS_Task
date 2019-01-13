@@ -14,6 +14,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link href="<c:url value="/resources/main.css" />" rel="stylesheet">
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.roles = [
+                {name : "Не выбрано", value : ""},
+                {name : "User1", value : "U1"},
+                {name : "User2", value : "U2"},
+                {name : "User3", value : "U3"}
+            ];
+        });
+    </script>
 </head>
 <body>
 <div class="container">
@@ -23,12 +34,11 @@
         <p id="profile-name" class="profile-name-card"></p>
         <form class="form-signin">
             <h5>Выберите пользователя:</h5>
-            <select class="form-control">
-                <option value="0">Не выбрано</option>
-                <option value="u1">User1</option>
-                <option value="u2">User2</option>
-                <option value="u3">User3</option>
-            </select>
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <select ng-model="selectedUser" class="form-control">
+                    <option ng-repeat="x in roles" value="{{x.value}}">{{x.name}}</option>
+                </select>
+            </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
         </form><!-- /form -->
     </div><!-- /card-container -->
