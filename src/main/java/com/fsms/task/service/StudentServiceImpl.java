@@ -80,7 +80,8 @@ public class StudentServiceImpl implements StudentService {
 
 		final InputStream fileInputStream = new FileInputStream("test.xml");
 		try {
-			output(signFile(fileInputStream, new File("keystore.jks")), "signed-test.xml");
+			ClassLoader classLoader = getClass().getClassLoader();
+			output(signFile(fileInputStream, new File(classLoader.getResource("keystore.jks").getFile())), "signed-test.xml");
 		}
 		finally {
 			IOUtils.closeQuietly(fileInputStream);
