@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import javax.validation.Valid;
 
+import com.fsms.task.model.Orders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -41,12 +42,15 @@ public class MyController {
 
 	@RequestMapping(value = { 	"/" }, method = RequestMethod.GET)
 	public String index(ModelMap model) {
-
-//		List<Student> students = service.findAllStudents();
-//		model.addAttribute("students", students);
 		return "index";
 	}
 
+	@RequestMapping(value= { "/role1" }, method = RequestMethod.GET)
+	public String role1(){
+
+//		List<Orders> orders = service.
+		return "role1page";
+	}
 	/*
 	 * Add a new Student.
 	 */
