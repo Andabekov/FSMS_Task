@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `student` (
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
 INSERT INTO `student` (`id`, `NAME`, `ENTERING_DATE`, `nationality`, `CODE`) VALUES
 	(1, 'Abu', '2019-01-13', 'Kazakh', '777'),
-	(2, 'Yerga', '2019-01-13', 'Mongolian', '999');
+	(2, 'Yerga', '2019-01-13', 'Kerey', '999');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
