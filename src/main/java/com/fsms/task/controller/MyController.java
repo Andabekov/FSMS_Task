@@ -31,12 +31,20 @@ public class MyController {
 	/*
 	 * List all existing Students.
 	 */
-	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/list" }, method = RequestMethod.GET)
 	public String listStudents(ModelMap model) {
 
 		List<Student> students = service.findAllStudents();
 		model.addAttribute("students", students);
 		return "allstudents";
+	}
+
+	@RequestMapping(value = { 	"/" }, method = RequestMethod.GET)
+	public String index(ModelMap model) {
+
+//		List<Student> students = service.findAllStudents();
+//		model.addAttribute("students", students);
+		return "index";
 	}
 
 	/*
