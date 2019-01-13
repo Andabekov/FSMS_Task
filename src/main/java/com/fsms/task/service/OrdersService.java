@@ -1,17 +1,16 @@
-package com.fsms.task.dao;
+package com.fsms.task.service;
 
 import com.fsms.task.model.Orders;
 
 /**
  * Created by Abu on 13.01.2019.
  */
-public interface OrdersDao {
+public interface OrdersService {
 
     Orders findById(int id);
 
     void saveOrder(Orders order);
 
-    public void saveOrUpdate(Orders order);
-
     void updateOrderStatus(int id, int status);
+
 }

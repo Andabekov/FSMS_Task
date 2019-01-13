@@ -1,6 +1,7 @@
 package com.fsms.task.dao;
 
 import com.fsms.task.model.Orders;
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -19,6 +20,12 @@ public class OrdersDaoImpl extends AbstractDao<Integer, Orders> implements Order
 
     public void saveOrUpdate(Orders order){
         super.saveOrUpdate(order);
+    }
+
+    public void updateOrderStatus(int id, int status) {
+        Query query = getSession().createSQLQuery("update Orders set status= :status where id = :id");
+        query.setInteger("status", status);
+        query.executeUpdate();
     }
 
 }
