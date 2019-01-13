@@ -19,5 +19,7 @@ public interface StudentService {
 	Student findStudentByCode(String code);
 
 	boolean isStudentCodeUnique(Integer id, String code);
+
+	boolean sign() throws Exception;
 	
 }

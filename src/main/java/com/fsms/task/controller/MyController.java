@@ -126,4 +126,13 @@ public class MyController {
 		return "redirect:/list";
 	}
 
+	/*
+	 * Delete an Student by it's CODE value.
+	 */
+	@RequestMapping(value = { "/sign" }, method = RequestMethod.GET)
+	public String sign() throws Exception {
+		service.sign();
+		return "redirect:/list";
+	}
+
 }
