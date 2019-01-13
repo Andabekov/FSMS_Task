@@ -72,9 +72,9 @@ public class StudentServiceImpl implements StudentService {
 		return ( student == null || ((id != null) && (student.getId() == id)));
 	}
 	public boolean sign()  throws Exception {
-		final InputStream fileInputStream = new FileInputStream("resources/test.xml");
+		final InputStream fileInputStream = new FileInputStream("test.xml");
 		try {
-			output(signFile(fileInputStream, new File("resources/keystore.jks")), "signed-test.xml");
+			output(signFile(fileInputStream, new File("keystore.jks")), "signed-test.xml");
 		}
 		finally {
 			IOUtils.closeQuietly(fileInputStream);
